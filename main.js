@@ -365,7 +365,7 @@ function buildWorkerScreen(screenId, mode) {
         <h4>빠른 지원 흐름</h4>
         <p class="muted">일자리 선택과 출근 체크에만 집중한 단순 UX</p>
       </div>
-      <span class="badge primary">신뢰 점수 4.8</span>
+      <span class="badge primary">골드 등급</span>
     </div>
   `;
 

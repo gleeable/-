@@ -589,3 +589,73 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+.badge {
+  border: 1px solid transparent;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.calendar-cell {
+  min-height: 86px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.calendar-cell span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.calendar-cell strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.calendar-cell.active {
+  background: linear-gradient(180deg, rgba(15, 91, 216, 0.12), rgba(255,255,255,0.96));
+  border-color: rgba(15, 91, 216, 0.28);
+}
+
+.level-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.level-chip {
+  padding: 14px 10px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  text-align: center;
+  font-weight: 800;
+}
+
+.level-chip.active {
+  background: linear-gradient(135deg, #ffb067, var(--accent));
+  color: #fff;
+  border-color: transparent;
+}
+
+@media (max-width: 760px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .level-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
