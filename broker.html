@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중개인 앱</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-role="broker" class="portal-body">
+    <div class="shell portal-shell">
+      <header class="topbar portal-topbar">
+        <div>
+          <p class="eyebrow">Broker Product</p>
+          <h1>중개인 앱 독립 페이지</h1>
+          <p class="hub-copy">현장 운영과 인력 배치, 정산까지 중개인 워크플로우만 집중해서 볼 수 있는 화면입니다.</p>
+        </div>
+        <div class="topbar-actions">
+          <div class="segmented" id="platformMode"></div>
+          <a class="cta ghost" href="./index.html">허브</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Core Product</p>
+          <h2 id="heroTitle"></h2>
+          <p id="heroDescription"></p>
+        </div>
+        <div class="hero-metrics" id="heroMetrics"></div>
+      </section>
+
+      <main class="portal-layout">
+        <aside class="role-rail">
+          <div class="rail-card">
+            <p class="eyebrow">Menu</p>
+            <div class="menu-list" id="menuList"></div>
+          </div>
+          <div class="rail-card" id="mvpCard"></div>
+        </aside>
+
+        <section class="content">
+          <div class="content-header">
+            <div>
+              <p class="eyebrow" id="productLabel"></p>
+              <h3 id="screenTitle"></h3>
+            </div>
+            <div class="screen-tabs" id="screenTabs"></div>
+          </div>
+          <div class="preview-grid portal-preview">
+            <section class="device-stage wide-stage">
+              <div class="device-frame" id="deviceFrame">
+                <div class="device-top">
+                  <div class="device-dots"><span></span><span></span><span></span></div>
+                  <strong id="deviceLabel"></strong>
+                </div>
+                <div class="device-screen" id="deviceScreen"></div>
+              </div>
+            </section>
+            <section class="details">
+              <article class="detail-card">
+                <p class="eyebrow">Screen Goals</p>
+                <div class="goal-list" id="goalList"></div>
+              </article>
+              <article class="detail-card">
+                <p class="eyebrow">Primary Actions</p>
+                <div class="action-list" id="actionList"></div>
+              </article>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./portal.js"></script>
+  </body>
+</html>

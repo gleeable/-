@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>현장 인력 플랫폼</title>
+    <title>현장 인력 플랫폼 허브</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,90 +12,98 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div class="shell">
+  <body class="hub-body">
+    <div class="shell hub-shell">
       <header class="topbar">
         <div>
           <p class="eyebrow">Construction Workforce Platform</p>
-          <h1>현장 속도를 그대로 옮긴 3개 제품 구조</h1>
+          <h1>3개 제품을 실제 서비스 구조처럼 분리한 플랫폼 허브</h1>
+          <p class="hub-copy">
+            중개인 앱, 노동자 앱, 관리자 웹을 각각 독립 진입 페이지로 분리하고, 앱 버전과 웹 버전을
+            각 제품 안에서 전환할 수 있게 구성했습니다.
+          </p>
         </div>
-        <div class="topbar-actions">
-          <div class="segmented" id="platformMode"></div>
-          <div class="segmented" id="productType"></div>
+        <div class="badge-row">
+          <span class="badge primary">중개인 핵심</span>
+          <span class="badge accent">노동자 초간단</span>
+          <span class="badge danger">관리자 운영 중심</span>
         </div>
       </header>
 
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">MVP to Launch</p>
-          <h2 id="heroTitle"></h2>
-          <p id="heroDescription"></p>
-        </div>
-        <div class="hero-metrics" id="heroMetrics"></div>
+      <section class="hub-hero">
+        <article class="hub-card hub-card-main">
+          <p class="eyebrow">Platform Flow</p>
+          <h2>건설사 / 현장 → 중개인 앱 → 노동자 앱 → 관리자 웹</h2>
+          <p class="muted">
+            MVP는 현장 배치 속도와 출근 증빙, 정산 흐름을 막지 않는 것이 핵심입니다. 각 제품은 역할에 맞는
+            정보 밀도와 CTA만 남겨서 설계했습니다.
+          </p>
+          <div class="flow horizontal-flow">
+            <div>현장 수요</div>
+            <span></span>
+            <div>중개인 운영</div>
+            <span></span>
+            <div>노동자 지원</div>
+            <span></span>
+            <div>운영 / 정산</div>
+          </div>
+        </article>
+        <article class="hub-card hub-metrics">
+          <div class="metric"><span class="eyebrow">출시 단위</span><strong>3 Products</strong></div>
+          <div class="metric"><span class="eyebrow">지원 뷰</span><strong>App + Web</strong></div>
+          <div class="metric"><span class="eyebrow">우선 MVP</span><strong>배치 / 출근 / 정산</strong></div>
+        </article>
       </section>
 
-      <main class="workspace">
-        <aside class="role-rail">
-          <div class="rail-card">
-            <p class="eyebrow">Products</p>
-            <div class="role-tabs" id="roleTabs"></div>
+      <section class="hub-grid">
+        <article class="hub-card product-card broker-tone">
+          <p class="eyebrow">Broker Product</p>
+          <h3>중개인 앱</h3>
+          <p class="muted">현장 리스트, 부족 인원, 인력 CRM, 매칭 요청, 수수료 정산까지 제어하는 핵심 제품.</p>
+          <div class="tag-row">
+            <span class="tag primary">홈</span>
+            <span class="tag primary">현장관리</span>
+            <span class="tag primary">인력관리</span>
+            <span class="tag accent">정산</span>
           </div>
-          <div class="rail-card">
-            <p class="eyebrow">Structure</p>
-            <div class="flow">
-              <div>건설사 / 현장</div>
-              <span></span>
-              <div>중개인 앱</div>
-              <span></span>
-              <div>노동자 앱</div>
-              <span></span>
-              <div>관리자 웹</div>
-            </div>
+          <div class="cta-row product-actions">
+            <a class="cta secondary" href="./broker.html">독립 페이지 열기</a>
+            <a class="cta ghost" href="./overview.html">전체 구조 보기</a>
           </div>
-          <div class="rail-card" id="mvpCard"></div>
-        </aside>
+        </article>
 
-        <section class="content">
-          <div class="content-header">
-            <div>
-              <p class="eyebrow" id="productLabel"></p>
-              <h3 id="screenTitle"></h3>
-            </div>
-            <div class="screen-tabs" id="screenTabs"></div>
+        <article class="hub-card product-card worker-tone">
+          <p class="eyebrow">Worker Product</p>
+          <h3>노동자 앱</h3>
+          <p class="muted">일자리 검색, 빠른 지원, GPS 출근 체크, 수익 확인만 남긴 속도 중심 제품.</p>
+          <div class="tag-row">
+            <span class="tag primary">일자리</span>
+            <span class="tag primary">내 일정</span>
+            <span class="tag accent">출근체크</span>
+            <span class="tag primary">수익</span>
           </div>
-
-          <div class="preview-grid">
-            <section class="device-stage">
-              <div class="device-frame" id="deviceFrame">
-                <div class="device-top">
-                  <div class="device-dots">
-                    <span></span><span></span><span></span>
-                  </div>
-                  <strong id="deviceLabel"></strong>
-                </div>
-                <div class="device-screen" id="deviceScreen"></div>
-              </div>
-            </section>
-
-            <section class="details">
-              <article class="detail-card">
-                <p class="eyebrow">Menu</p>
-                <div class="menu-list" id="menuList"></div>
-              </article>
-              <article class="detail-card">
-                <p class="eyebrow">Screen Goals</p>
-                <div class="goal-list" id="goalList"></div>
-              </article>
-              <article class="detail-card">
-                <p class="eyebrow">Primary Actions</p>
-                <div class="action-list" id="actionList"></div>
-              </article>
-            </section>
+          <div class="cta-row product-actions">
+            <a class="cta secondary" href="./worker.html">독립 페이지 열기</a>
+            <a class="cta ghost" href="./overview.html">전체 구조 보기</a>
           </div>
-        </section>
-      </main>
+        </article>
+
+        <article class="hub-card product-card admin-tone">
+          <p class="eyebrow">Admin Product</p>
+          <h3>관리자 웹</h3>
+          <p class="muted">중개인 운영, 노동자 검수, 거래량, 수수료, 리스크를 관리하는 운영 백오피스.</p>
+          <div class="tag-row">
+            <span class="tag primary">대시보드</span>
+            <span class="tag primary">중개인 관리</span>
+            <span class="tag primary">노동자 관리</span>
+            <span class="tag accent">정산</span>
+          </div>
+          <div class="cta-row product-actions">
+            <a class="cta secondary" href="./admin.html">독립 페이지 열기</a>
+            <a class="cta ghost" href="./overview.html">전체 구조 보기</a>
+          </div>
+        </article>
+      </section>
     </div>
-
-    <script src="./main.js"></script>
   </body>
 </html>

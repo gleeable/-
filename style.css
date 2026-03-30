@@ -478,3 +478,114 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+
+a {
+  text-decoration: none;
+}
+
+.hub-body,
+.portal-body {
+  min-height: 100vh;
+}
+
+.hub-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.hub-copy {
+  margin-top: 12px;
+  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hub-hero,
+.hub-grid,
+.portal-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.hub-hero {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.hub-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.hub-card {
+  padding: 26px;
+  border-radius: 28px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(24px);
+}
+
+.hub-card h2,
+.hub-card h3 {
+  margin: 0 0 12px;
+  letter-spacing: -0.04em;
+}
+
+.hub-metrics {
+  display: grid;
+  gap: 12px;
+}
+
+.horizontal-flow {
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+  margin-top: 18px;
+}
+
+.horizontal-flow span {
+  width: 24px;
+  height: 2px;
+  margin-left: 0;
+}
+
+.product-card {
+  display: grid;
+  gap: 16px;
+}
+
+.product-actions {
+  margin-top: 10px;
+}
+
+.broker-tone {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(232,241,255,0.94));
+}
+
+.worker-tone {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(239,247,252,0.94));
+}
+
+.admin-tone {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,242,237,0.94));
+}
+
+.portal-layout {
+  grid-template-columns: 300px 1fr;
+}
+
+.portal-preview {
+  grid-template-columns: minmax(360px, 1fr) 360px;
+}
+
+.wide-stage .device-frame {
+  max-width: none;
+}
+
+@media (max-width: 1180px) {
+  .hub-hero,
+  .hub-grid,
+  .portal-layout,
+  .portal-preview {
+    grid-template-columns: 1fr;
+  }
+}
